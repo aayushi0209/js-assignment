@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<p id="day"></p>
+<p id="time"></p>
+<script>
+var d = new Date();
+if(d.getDay()==0){
+document.getElementById("day").innerHTML = "Today is: Sunday";	
+}
+
+if(d.getDay()==1){
+document.getElementById("day").innerHTML = "Today is: Monday";	
+} 
+if(d.getDay()==2){
+document.getElementById("day").innerHTML = "Today is: Tuesday";	
+} 
+if(d.getDay()==3){
+document.getElementById("day").innerHTML = "Today is: Wednesday";	
+} 
+if(d.getDay()==4){
+document.getElementById("day").innerHTML = "Today is: Thrusday";	
+} 
+if(d.getDay()==5){
+document.getElementById("day").innerHTML = "Today is: Friday";	
+} 
+if(d.getDay()==6){
+document.getElementById("demo").innerHTML = "Today is: Saturday";	
+} 
+
+h=d.getHours()
+m=d.getMinutes()
+s=d.getSeconds()
+
+if(h>12){
+
+		document.getElementById("time").innerHTML = "Current time is : "+(h-12)+" PM : "+m+" : "+s;	
+
+}
+else{ 
+		document.getElementById("time").innerHTML = "Current time is : "+h+" AM : "+m+" : "+s;	
+
+}
+</script>
+</body>
+</html>

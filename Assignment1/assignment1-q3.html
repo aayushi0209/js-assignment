@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<p id="date1"></p>
+<p id="date2"></p>
+<p id="date3"></p>
+<p id="date4"></p>
+<script>
+var d = new Date();
+y=d.getFullYear()
+m=d.getMonth()+1
+dt=d.getDate()
+document.getElementById("date1").innerHTML ="Format:mm-dd-yy -> "+ m+"-"+dt+"-"+y+"<hr>";
+document.getElementById("date2").innerHTML ="Format:mm/dd/yy -> "+ m+"/"+dt+"/"+y+"<hr>";
+document.getElementById("date3").innerHTML ="Format:dd-mm-yy -> "+ dt+"-"+m+"-"+y+"<hr>";
+document.getElementById("date4").innerHTML ="Format:dd/mm/yy -> "+dt+"/"+m+"/"+y;	
+document
+</script>
+</body>
+</html>
