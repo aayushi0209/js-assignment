@@ -1,0 +1,68 @@
+<!-- Explore various methods in console function -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		console.log("Heyyy,Welcome!!!")
+
+		// Outputs an error message to the console
+		console.error("Oops,Try to connect Later!!")
+
+		// Clears the console
+		console.clear()
+
+		// Starts a timer (can track how long an operation takes)
+		console.time()
+		a={
+			'name':"Raman",
+			'age':34
+		}
+		b={
+			'name':"Pihu",
+			'age':14
+		}
+		c={
+			'name':"Riya",
+			'age':12
+		}
+		// Displays tabular data as a table
+		console.table({a,b,c})
+
+		// Writes an error message to the console if the assertion is false
+		console.assert(document.getElementById("demo"), "You have no element with ID 'demo'");
+
+		// Outputs an informational message to the console
+		console.info("Hello")
+
+		// Stops a timer that was previously started by console.time()
+		console.timeEnd()
+
+		// Outputs a warning message to the console
+		console.warn("Be Carefull!!")
+
+		// Outputs a stack trace to the console
+		console.trace()
+
+		// WORKING WITH GROUPS***************
+
+		// Creates a new inline group in the console. This indents following console messages by an additional level, until console.groupEnd() is called
+		console.group()
+		console.log("Inside the group1")
+		// Creates a new inline group in the console. However, the new group is created collapsed. The user will need to use the disclosure button to expand it
+		console.groupCollapsed()
+		console.log("Inside the group2")
+		// Exits the current inline group in the console
+		console.groupEnd()
+		console.groupEnd()
+
+		// Logs the number of times that this particular call to count() has been called
+		for (i = 0; i < 10; i++) {
+ 		 console.count();
+		}
+	</script>
+</body>
+</html>
