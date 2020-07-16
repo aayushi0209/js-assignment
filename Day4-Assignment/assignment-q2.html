@@ -1,0 +1,92 @@
+<!-- Explain with example the remaining methods of String and Array -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+
+	//String
+	var a="Good Morning Riya, how are you?"
+	console.log(a)
+	// length of string
+	console.log(a.length)
+	// index of particular word
+	console.log(a.indexOf("Riya"))
+	// last index of particular word
+	console.log(a.lastIndexOf("Mohan"))
+	// search if the value exists or not
+	console.log(a.search("Riya"))
+	// slice the array it can be negative
+	console.log(a.slice(3,8))
+	// substring same as slice but cannot be negative
+	console.log(a.substring(3,8))
+	// substr which takes first paramter as index and next as length unlike slice & substring which takes both parameters as index
+	console.log(a.substr(3,8))
+	// replace is used to replace the particular value
+	console.log(a.replace("Riya","Rohan"))
+
+	console.log(a.replace(/Riya/i, "Rohan"))
+	console.log(a.replace(/Riya/g, "Rohan"))
+	// To Uppercase
+	console.log(a.toUpperCase())
+	// To Lowercase
+	console.log(a.toLowerCase())
+	// Concat 2 strings
+	console.log(a.concat(" "," I am Fine!!"))
+	// trim extra white spaces
+	console.log(a.trim())
+	// character  at any index
+	console.log(a.charAt(1))
+	// character code at any index
+	console.log(a.charCodeAt(1))
+	// splitting string into array
+	console.log(a.split(" "))
+
+	//Array
+	colors=['red','blue','green','orange']
+	console.log(colors)
+	// adding to the array
+	colors.push('pink')
+	console.log(colors)
+	// deleting from the array
+	colors.pop()
+	console.log(colors)
+	colors.pop(3)
+	console.log(colors)
+	// joining
+	console.log(colors.join("|"))
+	// deleting first element
+	console.log(colors.shift())
+	// adding at first position 
+	console.log(colors.unshift("black"))
+	// converting to String
+	console.log(colors.toString())
+	// sorting array     
+	console.log(colors.sort())
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
