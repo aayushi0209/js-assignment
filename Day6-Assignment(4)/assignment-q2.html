@@ -1,0 +1,24 @@
+<!-- destructuring of objects -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	const Student={
+		name:"Helsink",
+		age:24,
+		projects:{
+			diceGame:"Two player dice game using javascript"
+		}
+	}
+
+	const {name,age,projects:{diceGame}}=Student
+	console.log(name)
+	console.log(age)
+	console.log(diceGame)
+</script>
+</body>
+</html>

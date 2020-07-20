@@ -1,0 +1,184 @@
+<!-- Make a Calculator in Javascript which can do operations as Addtion, Subtraction, Multiplication, Division, Square root, Percentage -->
+
+
+<!DOCTYPE >
+<html>
+<head>
+	<title>CALCULATOR</title>
+<script type="text/javascript">
+	function fin(){
+      let x = document.getElementById("tx").value 
+      let y = eval(x) 
+     document.getElementById("tx").value = y 
+   }
+
+   function clr(){
+document.getElementById("tx").value = ""    }
+
+   function on(){
+	document.getElementById("i").disabled = false; 
+	document.getElementById("i1").disabled = false; 
+	document.getElementById("i2").disabled = false; 
+	document.getElementById("i3").disabled = false; 
+	document.getElementById("i4").disabled = false; 
+	document.getElementById("i5").disabled = false; 
+	document.getElementById("i6").disabled = false; 
+	document.getElementById("i7").disabled = false; 
+	document.getElementById("i8").disabled = false; 
+	document.getElementById("i9").disabled = false; 
+	document.getElementById("i10").disabled = false; 
+	document.getElementById("i11").disabled = false; 
+	document.getElementById("i12").disabled = false; 
+	document.getElementById("i13").disabled = false; 
+	document.getElementById("i14").disabled = false; 
+	document.getElementById("i15").disabled = false; 
+   document.getElementById("clr").disabled = false; 
+	document.getElementById("bks").disabled = false; 
+   	}
+
+   function off(){ 
+   	document.getElementById("i").disabled = true; 
+	document.getElementById("i").disabled = true; 
+	document.getElementById("i1").disabled = true; 
+	document.getElementById("i2").disabled = true; 
+	document.getElementById("i3").disabled = true; 
+	document.getElementById("i4").disabled = true; 
+	document.getElementById("i5").disabled = true; 
+	document.getElementById("i6").disabled = true; 
+	document.getElementById("i7").disabled = true; 
+	document.getElementById("i8").disabled = true; 
+	document.getElementById("i9").disabled = true; 
+	document.getElementById("i10").disabled = true; 
+	document.getElementById("i11").disabled = true; 
+	document.getElementById("i12").disabled = true; 
+	document.getElementById("i13").disabled = true; 
+	document.getElementById("i14").disabled = true; 
+	document.getElementById("i15").disabled = true; 
+	document.getElementById("clr").disabled = true; 
+	document.getElementById("bks").disabled = true; 
+   
+   }
+
+   function bks(){
+    var a=document.getElementById("tx").value
+     var b=a.substr(0,(a.length-1))
+     document.getElementById("tx").value=b
+   }
+
+  function d(val) {
+    document.getElementById("tx").value+=val 
+  }
+</script>
+
+<style type="text/css">
+	body{
+		background-image: url('pic2.jpg');
+	    background-repeat: no-repeat; 		
+        background-size:100%;
+     	position:-1;
+	}
+	#d{
+		background:pink;
+		width:400 ;
+		height:620;
+		margin-top: 100;
+		box-shadow: 10px 10px black;
+		border-color: black;
+		border-radius: 20px;
+		opacity: 40%;
+	}
+	#tx{
+		padding: 10px;
+		font-size: 45px;
+		font-weight: bold;
+		font-family: Algerian;
+		margin-top: 30px;
+		margin-bottom: 30px;
+		width:400;
+		height:100;
+		background-color:black;
+		color:white;
+		border-radius: 30%;
+	    border-color: 2px solid black;
+	    box-shadow: 5px 5px black;
+	}
+	.b{
+		border-radius: 100%;
+		width: 70px;
+		height: 70px;
+		text-align:center;
+		font-size: 25px;
+		font-weight:bold;
+		background-color: black;
+		color:white;
+		box-shadow: 5px 5px black;
+	}
+
+	.b2{
+		border-radius: 30%;
+		width: 220px;
+		height: 70px;
+		text-align:center;
+		font-size: 25px;
+		font-weight:bold;
+		background-color: black;
+		color:white;
+		box-shadow: 5px 5px black;
+	}
+	.b1{
+		border-radius: 100%;
+		width: 70px;
+		height: 70px;
+		text-align: center;
+		font-size: 25px;
+		font-weight:bold;
+		background-color: black;
+		color:white;
+		box-shadow: 5px 5px black;
+		}
+	.b3{
+		border-radius: 30%;
+		width: 70px;
+		height: 180px;
+		text-align: center;
+		font-size: 25px;
+		font-weight:bold;
+		background-color: black;
+		color:white;
+		box-shadow: 20px black;
+	    float:right;
+	    
+	}
+
+</style>
+</head>
+<body>
+<center>
+	<div id ="d">
+	<input type="text" id="tx"><br><br>
+	<input type="button" class="b1" id="clr" value="CLR" onclick="clr()">
+	<input type="button" class="b" id="on" value="ON" onclick="on()">
+	<input type="button" class="b" id="off" value="OFF" onclick="off()">
+	<input type="button" class="b1" id="bks" value="BKS" onclick="bks()">
+	<input type="button" class="b3" id="i15" value="+" name="+"onclick="d('+')"><br><br>
+	<input type="button" class="b1" id="i14" value="7" name="7"onclick="d('7')">
+	<input type="button" class="b1" id="i13" value="8" name="8" onclick="d('8')">
+	<input type="button" class="b1" id="i12" value="9" name="9" onclick="d('9')">
+	<input type="button" class="b1" id="i11" value="/" name="/" onclick="d('/')"><br><br>
+	<input type="button" class="b1" id="i10" value="4" name="4" onclick="d('4')">
+	<input type="button" class="b1" id="i9" value="5" name="5" onclick="d('5')">
+	<input type="button" class="b1" id="i8" value="6" name="6" onclick="d('6')">
+	<input type="button" class="b1" id="i7" value="*" name="*" onclick="d('*')">
+
+	<input type="button" class="b3" id="i6" value="=" name="="onclick="fin()"><br><br>
+	
+	<input type="button" class="b1" id="i5" value="1" name="1" onclick="d('1')">
+	<input type="button" class="b1" id="i4" value="2" name="2" onclick="d('2')">
+	<input type="button" class="b1" id="i3"value="3" name="3" onclick="d('3')">
+	<input type="button" class="b1" id="i2" value="-" name="-" onclick="d('-')"><br><br>
+	<input type="button" class="b2" id="i1"value="0" name="0" onclick="d('0')">
+	<input type="button" class="b1" id="i" value="." name="." onclick="d('.')"> <br><br>
+	</div>
+</center>
+</body>
+</html>

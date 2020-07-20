@@ -1,0 +1,31 @@
+<!-- Imagine you are going out to do some grocery shopping.
+So you have an array called shoppingList with all the products you want to buy
+Now that you are inside of the shop, you have a basket with all the products from your list, but you want to
+add a few more.
+Create a new array called shoppingBasket, that will be a copy of the shoppingList array, and add some
+new products into it.
+ -->
+
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<title></title>
+ </head>
+ <body>
+ <script type="text/javascript">
+ 	var shoppingList=["oil","shampoo","carrot","peanunts"]
+ 	var shoppingBasket=shoppingList
+ 	console.log(shoppingBasket)
+ 	while(1){
+		 var item=prompt("Enter new item!!Or If you want to checkout write 'done'!!! ")
+ 		if(item == "done"){
+ 			break;
+ 		}
+ 		else{
+ 			shoppingBasket.push(item)
+ 			console.log(shoppingBasket)
+ 		}
+ 	}
+ </script>
+ </body>
+ </html>
