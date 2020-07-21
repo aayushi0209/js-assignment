@@ -1,0 +1,32 @@
+<!-- Question 1:
+Write a program which does the following things:
+1. Takes a positive number from the user.
+2. Makes an array of numbers till the number given by user
+3. Use higher order function to filter the odd numbers
+4. Generate and array of the cubes of the filtered numbers
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	var value=parseInt(prompt("Enter the Any positive value-"))
+	arr=[]
+	for(var i=1;i<=value;i++){
+		arr.push(i)
+	}
+	console.log(arr)
+
+	// filter the array
+	let arr1=arr.filter(function(el){if (el%2==0) return el})
+	console.log(arr1)
+
+	// cubes of filtered array
+	let arr2=arr1.map(function(el){return el**3})
+	console.log(arr2)
+</script>
+</body>
+</html>

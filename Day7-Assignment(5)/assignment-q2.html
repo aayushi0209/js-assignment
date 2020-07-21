@@ -1,0 +1,70 @@
+<!-- Create a Class User with properties as name, age & email.
+He can login and logout
+Create another class Moderator which has all the features of User, plus additional functionality to Add coins and remove coins.
+Create one more class Admin which has all the features of Moderator plus additional features like add a Course and delete a particular course for a user. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	 
+	 class User{
+	 	constructor(name,age,email){
+	 	this.name=name;
+	 	this.age=age;
+	 	this.email=email;
+	 	this.Coins=0;
+	 	}
+		login(){
+			console.log(`${this.name} has logged in`);
+			return this;
+
+		}
+
+		logout(){
+			console.log(`${this.name} has logged out`);
+			return this;
+			
+		}
+	 }
+
+	 class Moderator extends User{
+	 	constructor(name,age,email){
+	 		super(name,age,email);
+	 	}
+	 	addcoin(){
+	 		this.Coins++;
+	 		console.log(`${this.name} has ${this.Coins} coins`);
+			return this;
+
+	 	}	
+	 	removecoin(){
+
+	 		this.Coins--;
+	 		console.log(`${this.name} has ${this.Coins} coins`);
+			return this;
+
+	 	}
+	 }
+
+	 class Admin{
+	 	addCourse(user,course){
+	 		user.courses.push(course);
+	 	}
+
+	 }
+
+let user1=new User("abc",24,"asbca@gmail.com")
+console.log(user1)
+
+let user2=new Moderator("abc",24,"asbca@gmail.com")
+user2.login().addcoin().addcoin().addcoin().addcoin().removecoin().removecoin().addcoin().logout()
+console.log(user2)
+
+let ad=new Admin("riya","Physics")
+</script>
+</body>
+</html>
