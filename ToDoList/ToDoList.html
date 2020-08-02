@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ToDo-List </title>
+		 <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
+</head>
+<body>
+		 <nav>
+   		 	<div class="nav-wrapper">
+      		<a href="#" class="brand-logo">TODO LIST</a>
+     		</div>
+  		</nav>
+
+	<div class="container">
+		<label><h6>Task</h6></label>
+		<input  type="text" id="newItem" required >
+		  <button class=" waves-light red btn-small" onclick="add()">add</button>
+  		<ul id="myUl">lIST</ul>
+	</div>
+
+<script type="text/javascript">
+	var ul = document.getElementById("myUl");
+	
+	
+
+function add() {
+  var item = document.getElementById("newItem").value;
+
+		var itemTxt = document.createTextNode(item);
+ 		var li = document.createElement("li");
+  		var btn = document.createElement("button" );
+		var btnx = document.createTextNode("X");
+  		btn.setAttribute("onclick", "remove()");
+  		btn.appendChild(btnx);
+  		li.appendChild(itemTxt);
+  		li.appendChild(btn);
+ 		ul.appendChild(li);
+}
+function remove() {
+  var task = this.event.currentTarget.parentNode;
+  ul.removeChild(task);
+}
+
+ul.innerHTML = localStorage["list"];
+
+setInterval(function(){
+  localStorage["list"] = ul.innerHTML;
+}, 1000);
+
+</script>
+</body>
+</html> 
